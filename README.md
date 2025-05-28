@@ -11,7 +11,7 @@ Professor: Ricardo Resende de Mendonça
 
 ## Objetivos do Trabalho
 
-O objetivo deste trabalho é apresentar o banco de dados **CassandraDB**, explicando como ele surgiu, suas principais características técnicas, vantagens, e casos de uso. Também foi desenvolvido um guia prático de instalação, testes com scripts básicos e um quiz interativo para reforçar os conhecimentos abordados na apresentação.
+O objetivo deste trabalho é apresentar o banco de dados **CassandraDB**, explicando como ele surgiu, suas principais características técnicas e casos de uso. Também foi desenvolvido um guia prático de instalação, testes com scripts básicos e um quiz interativo para reforçar os conhecimentos abordados na apresentação.
 
 ---
 
@@ -20,38 +20,31 @@ O objetivo deste trabalho é apresentar o banco de dados **CassandraDB**, explic
 A apresentação aborda os seguintes tópicos:
 
 - O que é o CassandraDB?
-- Origem e história do projeto
-- Arquitetura distribuída e modelo de dados
-- Principais vantagens e desvantagens
+- Como surgiu?
+- Modelagem
+- Linguagem de Consulta CassandraDB (CQL)
 - Caso de uso real: Netflix
-- Guia de instalação com e sem Docker
-- Scripts básicos para teste
+- Guia de instalação via Docker
+- Scripts básicos para demonstração
 - Quiz interativo
 
 📄 [Clique aqui para acessar o PDF da apresentação](https://link-para-o-pdf.com)
 
 ---
 
-## Guia de Instalação
+## Guia de Instalação com Docker
 
 ### 1. Pré-requisitos
 
-- [Java 8 ou superior](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
-- [Docker (opcional)](https://www.docker.com)
-- Sistema operacional Windows, Linux ou Mac
+- [Download Docker](https://www.docker.com)
+- Atualizar o WSL com ```wsl.exe --update```
 
-### 2. Instalação via Docker (Recomendado)
+### 2. Inicializar um container CassandraDB
 
 ```bash
 docker pull cassandra
 docker run --name cassandra-db -p 9042:9042 -d cassandra
 ```
-
-### 3. Instalação Manual
-
-Você pode fazer o download manual do Cassandra diretamente pelo link abaixo e seguir o guia oficial:
-
-🔗 [Download do Cassandra](https://cassandra.apache.org/_/download.html)
 
 ---
 
@@ -65,7 +58,7 @@ Acesse o terminal e utilize o `cqlsh` para executar os comandos abaixo:
 cqlsh localhost
 ```
 
-### Criar Keyspace e Tabela
+### Criar uma Tabela
 
 ```sql
 CREATE KEYSPACE exemplo
