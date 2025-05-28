@@ -2,10 +2,10 @@
 
 ## Autor 👨‍💻
 
-**Pedro Nicolas Costa** 
-Curso: Ciência da Computação (semestre 3/8)
-Universidade: USCS - Universidade Municipal de São Caetano do Sul
-Disciplina: Bancos de Dados Não Relacionais  
+**Pedro Nicolas Costa** <br>
+Curso: Ciência da Computação (semestre 3/8) <br>
+Universidade: USCS - Universidade Municipal de São Caetano do Sul <br>
+Disciplina: Bancos de Dados Não Relacionais <br>
 Professor: Ricardo Resende de Mendonça
 
 ---
