@@ -29,7 +29,7 @@ A apresentação aborda os seguintes tópicos:
 - Scripts básicos para demonstração
 - Quiz interativo
 
-📄 [Clique aqui para acessar o PDF da apresentação](https://link-para-o-pdf.com)
+📄 [Clique aqui para acessar o PDF da apresentação](https://github.com/pedronicolascosta/CassandraDB/blob/main/CassandraDB.pdf)
 
 ---
 
@@ -55,7 +55,19 @@ Acesse o terminal e utilize o `cqlsh` para executar os comandos abaixo:
 ### Conectar ao Cassandra
 
 ```bash
-cqlsh localhost
+cqlsh
+```
+
+### Criar Keyspace
+
+```cql
+CREATE KEYSPACE IF NOT EXISTS usuarios_ks
+WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+```
+
+### Usar o Keyspace
+```cql
+USE usuarios_ks;
 ```
 
 ### Criar uma Tabela
