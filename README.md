@@ -125,6 +125,12 @@ DELETE telefone FROM usuarios
 WHERE id = ;
 ```
 
+### Add de coluna
+
+```cql
+ALTER TABLE usuarios ADD cpf TEXT;
+```
+
 ### Delete de linha
 
 ```cql
