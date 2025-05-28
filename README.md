@@ -1,21 +1,22 @@
 # CassandraDB - Apresentação e Guia Prático
 
-## Autor
+## Autor 👨‍💻
 
-**Pedro Nicolas Costa**  
-Graduando em Ciência da Computação na Universidade Municipal de São Caetano do Sul (USCS)  
+**Pedro Nicolas Costa** 
+Curso: Ciência da Computação (semestre 3/8)
+Universidade: USCS - Universidade Municipal de São Caetano do Sul
 Disciplina: Bancos de Dados Não Relacionais  
 Professor: Ricardo Resende de Mendonça
 
 ---
 
-## Objetivos do Trabalho
+## Objetivos do Trabalho 🎯
 
 O objetivo deste trabalho é apresentar o banco de dados **CassandraDB**, explicando como ele surgiu, suas principais características técnicas e casos de uso. Também foi desenvolvido um guia prático de instalação, testes com scripts básicos e um quiz interativo para reforçar os conhecimentos abordados na apresentação.
 
 ---
 
-## Conteúdo da Apresentação
+## Conteúdo da Apresentação 🔍
 
 A apresentação aborda os seguintes tópicos:
 
@@ -32,14 +33,14 @@ A apresentação aborda os seguintes tópicos:
 
 ---
 
-## Guia de Instalação com Docker
+## Guia de Instalação com Docker 💻
 
 ### 1. Pré-requisitos
 
 - [Download Docker](https://www.docker.com)
 - Atualizar o WSL com ```wsl.exe --update```
 
-### 2. Inicializar um container CassandraDB
+### 2. Criar um container CassandraDB
 
 ```bash
 docker run --name cassandra-db -p 9042:9042 -d cassandra
@@ -47,7 +48,7 @@ docker run --name cassandra-db -p 9042:9042 -d cassandra
 
 ---
 
-## Scripts para Teste
+## Scripts para Teste 👾
 
 Acesse o terminal e utilize o `cqlsh` para executar os comandos abaixo:
 
@@ -128,7 +129,7 @@ TRUNCATE usuarios;
 ```
 ---
 
-## Quiz Interativo
+## Quiz Interativo 🧠
 
 Teste seus conhecimentos com perguntas relacionadas ao conteúdo apresentado:
 
@@ -136,7 +137,7 @@ Teste seus conhecimentos com perguntas relacionadas ao conteúdo apresentado:
 
 ---
 
-## Referências Bibliográficas
+## Referências Bibliográficas 📚
 
 - [Apache Cassandra - Documentação Oficial](https://cassandra.apache.org/doc/latest/)
 - [Docker - Site Oficial](https://www.docker.com)
