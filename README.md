@@ -103,8 +103,6 @@ VALUES (uuid(), 'João Mendes');
 -- Nome e email
 INSERT INTO usuarios (id, nome, email)
 VALUES (uuid(), 'Luciana Rocha', 'luciana@email.com');
-
-);
 ```
 
 ### Select
