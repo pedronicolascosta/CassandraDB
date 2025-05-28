@@ -55,7 +55,7 @@ Acesse o terminal e utilize o `cqlsh` para executar os comandos abaixo:
 ### Conectar ao Cassandra
 
 ```bash
-cqlsh
+cqlsh localhost
 ```
 
 ### Criar Keyspace
