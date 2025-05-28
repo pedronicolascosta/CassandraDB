@@ -42,7 +42,6 @@ A apresentação aborda os seguintes tópicos:
 ### 2. Inicializar um container CassandraDB
 
 ```bash
-docker pull cassandra
 docker run --name cassandra-db -p 9042:9042 -d cassandra
 ```
 
@@ -60,24 +59,73 @@ cqlsh localhost
 
 ### Criar uma Tabela
 
-```sql
-CREATE KEYSPACE exemplo
-WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
-
-USE exemplo;
-
-CREATE TABLE usuarios (
+```cql
+CREATE TABLE IF NOT EXISTS usuarios (
     id UUID PRIMARY KEY,
     nome TEXT,
-    email TEXT
+    email TEXT,
+    telefone TEXT
 );
+```
 
+### Inserindo 5 Registros
+
+```cql
+-- Inserir com todos os dados
+INSERT INTO usuarios (id, nome, email, telefone)
+VALUES (uuid(), 'Ana Silva', 'ana@email.com', '11999990001');
+
+-- Sem telefone
 INSERT INTO usuarios (id, nome, email)
-VALUES (uuid(), 'Pedro', 'pedro@email.com');
+VALUES (uuid(), 'Carlos Lima', 'carlos@email.com');
 
+-- Sem email
+INSERT INTO usuarios (id, nome, telefone)
+VALUES (uuid(), 'Mariana Costa', '11988880002');
+
+-- Apenas nome
+INSERT INTO usuarios (id, nome)
+VALUES (uuid(), 'João Mendes');
+
+-- Nome e email
+INSERT INTO usuarios (id, nome, email)
+VALUES (uuid(), 'Luciana Rocha', 'luciana@email.com');
+
+);
+```
+
+### Select
+
+```cql
 SELECT * FROM usuarios;
 ```
 
+### Update
+
+```cql
+UPDATE usuarios SET telefone = '11999997777'
+WHERE id = ;
+```
+
+### Delete de coluna
+
+```cql
+DELETE telefone FROM usuarios
+WHERE id = ;
+```
+
+### Delete de linha
+
+```cql
+DELETE FROM usuarios
+WHERE id = ;
+```
+
+### Delete All
+
+```cql
+TRUNCATE usuarios;
+```
 ---
 
 ## Quiz Interativo
@@ -91,11 +139,5 @@ Teste seus conhecimentos com perguntas relacionadas ao conteúdo apresentado:
 ## Referências Bibliográficas
 
 - [Apache Cassandra - Documentação Oficial](https://cassandra.apache.org/doc/latest/)
-- [Download do Cassandra](https://cassandra.apache.org/_/download.html)
 - [Docker - Site Oficial](https://www.docker.com)
-- Hewitt, E. (2010). *Cassandra: The Definitive Guide*. O’Reilly Media.
 - [Caso de uso na Netflix](https://netflixtechblog.com/building-netflixs-distributed-tracing-infrastructure-bb856c319304)
-- https://www.baeldung.com/cassandra
-- https://www.geeksforgeeks.org/apache-cassandra/
-
----
